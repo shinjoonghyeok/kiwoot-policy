@@ -1,0 +1,16 @@
+:root{--bg:#FFF8E1;--card:#FFFFFF;--ink:#3E241E;--muted:#6E5A55;--accent:#FFC93C;--line:#F0E3C8}
+@media (prefers-color-scheme:dark){:root{--bg:#221B18;--card:#2E2522;--ink:#F5ECE6;--muted:#C7B7B0;--accent:#FFD24D;--line:#3F3430}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 -apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif}
+main{max-width:760px;margin:0 auto;padding:32px 16px 64px}
+header{display:flex;align-items:center;gap:12px;margin-bottom:24px}
+header .dot{width:44px;height:44px;border-radius:14px;background:var(--accent);display:grid;place-items:center;font-weight:800;color:#3E241E}
+h1{font-size:26px;margin:0}
+h2{font-size:19px;margin:28px 0 8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 20px 8px;margin:16px 0}
+.muted{color:var(--muted);font-size:14px}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th,td{border-bottom:1px solid var(--line);padding:8px 6px;text-align:left;vertical-align:top}
+a{color:inherit}
+nav a{margin-right:14px}
+ol li,ul li{margin:4px 0}
