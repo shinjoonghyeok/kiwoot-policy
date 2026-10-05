@@ -3,7 +3,7 @@
 <title>기웃기웃 개인정보처리방침</title><link rel="canonical" href="https://kiwoot.com/privacy"><link rel="stylesheet" href="style.css"></head>
 <body><main>
 <header><div class="dot">기</div><h1>개인정보처리방침</h1></header>
-<p class="muted">기웃기웃(Kiwoot) · 운영: 2Guns · 최종 수정: 2026년 10월 4일 · <strong>출시 전 점검 중</strong> (시행일은 정식 출시 때 정합니다)</p>
+<p class="muted">기웃기웃(Kiwoot) · 운영: 2Guns · 최종 수정: 2026년 10월 5일 · <strong>출시 전 점검 중</strong> (시행일은 정식 출시 때 정합니다)</p>
 <nav class="muted"><a href="#en">English</a><a href="terms">이용약관</a><a href="community">커뮤니티 운영정책</a><a href="delete-account">계정 삭제 방법</a></nav>
 <!--
   [운영 메모 — 화면에 보이지 않음] 2026-10-04 코드와 대조해 고쳤다: 별점 문구 삭제, 투표·시작 신청·반응·Remote Config 추가, "새 단지 등록" 삭제.
@@ -19,7 +19,8 @@
 <h2>1. 받는 정보와 쓰는 곳</h2>
 <table>
 <tr><th>정보</th><th>쓰는 곳</th></tr>
-<tr><td>구글 계정 식별값(사용자 ID), 이메일, 이름</td><td>로그인과 본인 확인. 이메일과 이름은 다른 이웃에게 보이지 않습니다.</td></tr>
+<tr><td>구글 계정 식별값(사용자 ID), 이메일, 이름 (구글로 로그인한 경우)</td><td>로그인과 본인 확인. 이메일과 이름은 다른 이웃에게 보이지 않습니다.</td></tr>
+<tr><td>카카오 회원번호(고유 번호) (카카오로 로그인한 경우에만)</td><td>로그인과 본인 확인. 카카오의 닉네임·프로필 사진·이메일·성별·연령은 <b>받지 않습니다</b>. 다른 이웃에게 보이지 않습니다.</td></tr>
 <tr><td>닉네임, 동</td><td>이웃에게 "○○동 닉네임"으로 표시. 호수는 받지 않습니다.</td></tr>
 <tr><td>현재 위치(GPS)</td><td>거주 아파트를 인증하거나 옮길 때, 근처 아파트를 찾을 때 한 번 확인하는 데만 씁니다. 내 위치는 저장하지 않습니다.</td></tr>
 <tr><td>인증한 아파트(단지)</td><td>같은 아파트 주민끼리만 글을 보여 주는 데 씁니다.</td></tr>
@@ -35,6 +36,9 @@
 
 <h2>2. 보관하는 곳과 맡기는 곳</h2>
 <p>정보는 Google의 Firebase(Authentication, Cloud Firestore, Google 애널리틱스, Remote Config)에 저장·처리됩니다. Remote Config는 앱 업데이트 안내를 위해 최신 버전 번호를 받아 오는 데만 씁니다. Google은 앱을 대신해 정보를 보관·처리하며, 서버는 국외(Google Cloud 데이터센터)에 있을 수 있습니다. 법에 따른 요청이 있는 경우를 빼고 정보를 다른 곳에 팔거나 넘기지 않습니다.</p>
+
+<p><b>카카오 로그인:</b> 카카오로 로그인하면 앱이 카카오 서비스와 통신해 로그인 증표가 기웃기웃 앱의 것인지 확인합니다. 이 확인은 Google Cloud의 작은 서버 프로그램(Cloud Run 함수, 서울 리전)에서 이루어지며, 증표(토큰)는 확인한 즉시 버리고 저장하지 않습니다. 구글로 만든 계정과 카카오로 만든 계정은 서로 별개이며 자동으로 합쳐지지 않습니다.</p>
+<p><b>카카오 지도:</b> 지도를 보면 지도 제공자(카카오)와 기기 사이에 통신이 생길 수 있습니다(지도 화면과 기기 식별 정보). 기웃기웃은 <b>내 위치를 지도에 표시하거나 지도 서비스로 보내지 않으며</b>, 지도 서비스의 검색 결과를 저장하지 않습니다.</p>
 
 <h2>3. 보관 기간</h2>
 <ul>
@@ -67,7 +71,8 @@
 <h1 style="font-size:22px">Privacy Policy (English)</h1>
 <p class="muted">Kiwoot · Operated by 2Guns · Effective September 29, 2026</p>
 <div class="card">
-<p><b>What we collect:</b> your Google account ID, email and name (for sign-in only; never shown to others); nickname and building number (shown to neighbors); your GPS location once when you verify or change your apartment (your location is not stored); your verified apartment; service-start requests (apartment and time; not a residence verification); poll participation (which option you chose, never shown to neighbors); content you post (places you introduce, reviews with optional menu and one optional photo, emoji reactions, meetups, participation); there are no star ratings; saved places, visit stamps, badges and your block list; reports you file; "ate here" entries (recommend / not great, neighbor tags), shown to neighbors only as counts and tags; and app usage statistics via Google Analytics for Firebase (app instance ID, screens and features used, device and OS, approximate region, complex ID), kept for 2 months, without names, emails, post text or advertising IDs. App settings stay on your device. We do not collect advertising IDs or contacts. The only photo is the one you choose for a review: the app shrinks it, strips location and other capture data before upload, and keeps no original; only neighbors in your apartment can see it (stored in Google Cloud Storage). We don't track your location after sign-up.</p>
+<p><b>What we collect:</b> your Google account ID, email and name if you sign in with Google, or only an anonymous Kakao member number if you sign in with Kakao (no name, email, profile or photo from Kakao); used for sign-in only and never shown to others; nickname and building number (shown to neighbors); your GPS location once when you verify or change your apartment (your location is not stored); your verified apartment; service-start requests (apartment and time; not a residence verification); poll participation (which option you chose, never shown to neighbors); content you post (places you introduce, reviews with optional menu and one optional photo, emoji reactions, meetups, participation); there are no star ratings; saved places, visit stamps, badges and your block list; reports you file; "ate here" entries (recommend / not great, neighbor tags), shown to neighbors only as counts and tags; and app usage statistics via Google Analytics for Firebase (app instance ID, screens and features used, device and OS, approximate region, complex ID), kept for 2 months, without names, emails, post text or advertising IDs. App settings stay on your device. We do not collect advertising IDs or contacts. The only photo is the one you choose for a review: the app shrinks it, strips location and other capture data before upload, and keeps no original; only neighbors in your apartment can see it (stored in Google Cloud Storage). We don't track your location after sign-up.</p>
+<p><b>Kakao:</b> Kakao sign-in checks your Kakao token with Kakao through a small Google Cloud function (Seoul region); the token is discarded right after the check and never stored. The map is provided by Kakao, so your device may communicate with Kakao to show map tiles; Kiwoot does not show your location on the map or send it to the map service. Google and Kakao accounts are separate and are not merged.</p>
 <p><b>Where it's stored:</b> Google Firebase (Authentication, Cloud Firestore, Analytics, Remote Config for update notices), which may process data outside Korea. We don't sell or share your data except where required by law.</p>
 <p><b>Retention and deletion:</b> until you delete your account (in the app: My → Delete account, or see <a href="delete-account">how to request deletion</a>). Review photos are deleted; the text of your reviews remains for neighbors with the author removed ("Former neighbor"), no longer linked to your name, email or nickname. Places you introduced remain for your neighbors, attributed to "Former neighbor"; poll participation and service-start records may remain so that counts stay consistent, and are no longer linked to your name or email once your login account is deleted. Reports are kept for one year after they are filed and then deleted automatically.</p>
 <p><b>Children:</b> the app is for people aged 14 and over.</p>
