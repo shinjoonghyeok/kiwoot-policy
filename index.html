@@ -13,89 +13,136 @@
 
 <link rel="stylesheet" href="home.css">
 <link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="96x96" href="/img/favicon-96.png"><link rel="icon" type="image/png" sizes="192x192" href="/img/favicon-192.png"><link rel="apple-touch-icon" href="/img/icon-192.png">
-</head>
-<body>
-<div class="wrap">
-
-<header class="top">
-  <a class="brand" href="./"><img src="img/icon-192.png" alt="" width="36" height="36">기웃기웃</a>
-  <nav data-nosnippet><a href="#features">기능</a><a href="#area">지역</a><a href="#faq">질문</a><a class="keep" href="tester">테스터 참여</a></nav>
-</header>
-
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"MobileApplication","name":"기웃기웃","operatingSystem":"ANDROID","applicationCategory":"LifestyleApplication","description":"같은 아파트 이웃이 먹어본 동네 맛집을 기웃거리는 앱","url":"https://kiwoot.com/","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}</script></head>
+<body class="nojs">
+<header class="top"><div class="wrap">
+  <a class="brand" href="./"><img src="img/icon-192.png" alt="" width="34" height="34">기웃기웃</a>
+  <nav data-nosnippet><a href="#why">왜 다른가요</a><a href="#town">써 보기</a><a href="#area">지역</a><a href="#faq">질문</a><a class="keep" href="https://play.google.com/store/apps/details?id=com.twoguns.kiwoot">앱 받기</a></nav>
+</div></header>
 <main>
-<div class="hero">
-  <div>
-    <span class="badge" data-nosnippet>🌱 지금은 테스트 중 · 테스터를 모집해요</span>
-    <h1>우리 아파트 이웃이<br>먹어본 동네 맛집</h1>
-    <p class="lead">별점 대신 <b>이웃의 한마디</b>. 같은 단지 이웃이 실제로 먹어본 곳만 순위에 올라요.</p>
-    <div class="btns" data-nosnippet>
-      <a class="btn" href="tester">테스터로 먼저 써 보기</a>
-      <a class="btn ghost" href="#features">어떤 앱이에요?</a>
+<section class="hero" style="padding-bottom:0">
+  <div class="stars" aria-hidden="true"></div><div class="win" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="copy">
+      <span class="badge" data-nosnippet>📱 안드로이드 · 무료</span>
+      <h1>이웃이 먹어본 곳이<br>제일 믿을 만하니까.</h1>
+      <p class="lead">별점 말고, 우리 동네 이웃의 <b>“먹어봤어요”</b>와 한마디. 같은 아파트 이웃이 실제로 다녀온 가게를 기웃거려 보세요.</p>
+      <div class="btns" data-nosnippet><a class="btn" href="https://play.google.com/store/apps/details?id=com.twoguns.kiwoot">Google Play에서 받기</a><a class="btn ghost" href="#town">먼저 체험해 보기</a></div>
+      <p class="note" data-nosnippet>가입 후 우리 아파트를 인증하면 바로 시작해요.</p>
     </div>
-    <p class="note" data-nosnippet>안드로이드 폰 · 무료 · 약 5분이면 시작해요. 정식 출시 뒤에는 Play 스토어에서 받을 수 있어요.</p>
-  </div>
-  <img class="kiwoot" src="img/kiwoot.webp" alt="기웃이: 목이 긴 아기 기린 마스코트" width="376" height="520">
-</div>
-
-<section aria-label="앱 화면">
-  <div class="shots">
-    <figure class="shot" style="margin:0"><img src="img/shot-list.webp" alt="이웃 추천 TOP 목록 화면" width="540" height="1111" loading="lazy"><span>이웃이 먹어본 곳만 순위에</span></figure>
-    <figure class="shot" style="margin:0"><img src="img/shot-roulette.webp" alt="오늘 뭐 먹지 룰렛 화면" width="540" height="1111" loading="lazy"><span>오늘 뭐 먹지? 기웃이가 골라 줘요</span></figure>
-    <figure class="shot" style="margin:0"><img src="img/shot-map.webp" alt="단지 둘레 1km 맛집 지도 화면" width="540" height="1100" loading="lazy"><span>단지 둘레 1km를 한눈에</span></figure>
-    <figure class="shot" style="margin:0"><img src="img/shot-home.webp" alt="오늘 우리 동네 소식 화면" width="540" height="1087" loading="lazy"><span>오늘 우리 동네 소식</span></figure>
-    <figure class="shot" style="margin:0"><img src="img/shot-meetups.webp" alt="같이 먹기 모집 화면" width="540" height="1100" loading="lazy"><span>배달비는 나누고 같이 먹고</span></figure>
-    <figure class="shot" style="margin:0"><img src="img/shot-my.webp" alt="방문 도장과 기웃이 배지 화면" width="540" height="1100" loading="lazy"><span>도장과 배지 모으기</span></figure>
+    <div class="stage">
+      <div class="bubble" id="bub" aria-hidden="true">오늘은 뭐 먹지? 👀</div>
+      <img class="g" id="hg" src="img/g-peek-over.webp" alt="담장 너머로 기웃거리는 아기 기린 마스코트 기웃이" width="564" height="520">
+      <div class="wall" aria-hidden="true"></div>
+    </div>
   </div>
 </section>
 
-<section id="features">
-  <h2>이런 걸 할 수 있어요</h2>
-  <p class="sub">동네 맛집을 고르는 가장 믿을 만한 방법은 이웃에게 물어보는 거라서요.</p>
-  <div class="grid">
-    <div class="card"><span class="emoji">🏆</span><h3>이웃이 먹어본 곳만 순위</h3><p>"먹어봤어요"를 누르면 추천·별로와 이웃 태그가 쌓여요. 이웃 3명이 추천하면 우리 단지 TOP에 올라요.</p></div>
-    <div class="card"><span class="emoji">🎲</span><h3>오늘 뭐 먹지? 룰렛</h3><p>고민될 땐 기웃이가 골라 줘요. "이웃이 가본 곳만", "도보 10분 이내"처럼 좁힐 수도 있어요.</p></div>
-    <div class="card"><span class="emoji">🗺️</span><h3>단지 둘레 1km 지도</h3><p>우리 아파트 둘레 맛집을 지도에서 한눈에. 도보로 얼마나 걸리는지도 알려 줘요.</p></div>
-    <div class="card"><span class="emoji">🍱</span><h3>같이 먹기</h3><p>같은 단지 이웃과 배달비를 나누거나(N빵), 함께 식사하고, 공동구매도 해요.</p></div>
-    <div class="card"><span class="emoji">📰</span><h3>오늘의 동네 소식</h3><p>오늘 이웃들이 어디서 먹었는지, 가벼운 투표까지. 이름과 시간은 드러나지 않아요.</p></div>
-    <div class="card"><span class="emoji">🦒</span><h3>기웃이와 함께</h3><p>도장과 배지를 모으면 기웃이가 함께 기뻐해요. 짧게 자주 열어 보는 앱이 목표예요.</p></div>
+<section id="why"><div class="wrap">
+  <span class="eyebrow rv">별점의 빈칸</span>
+  <h2 class="rv">별 4.8이 말해 주지 않는 것</h2>
+  <p class="lead rv">누가, 얼마나 가까이 살면서, 몇 번이나 가 봤는지는 별점에 없어요. 기웃기웃은 그 빈칸을 이웃으로 채워요.</p>
+  <div class="two rv">
+    <div class="card dim"><span class="tag">흔한 별점</span><div class="stars5">★★★★★ <span class="muted">4.8</span></div>
+      <div class="rev">“맛있어요 또 올게요”<b class="muted">누구인지 알 수 없는 리뷰</b></div>
+      <div class="rev">“친절하고 깔끔해요”<b class="muted">언제 다녀온 건지 알 수 없는 리뷰</b></div></div>
+    <div class="card"><span class="tag hot">기웃기웃</span><div><b>😋 이웃 7명이 먹어봤어요</b></div>
+      <div class="rev"><span class="who">같은 아파트 이웃</span>“국물이 진해서 비 오는 날 생각나요”</div>
+      <div class="rev"><span class="who">이웃</span>“혼자 가도 눈치 안 보여요”</div>
+      <p class="ex">※ 화면 예시예요. 실제 가게·후기가 아니에요.</p></div>
   </div>
-</section>
+  <p class="loopnote rv">외부 광고·협찬 글은 순위와 추천에 섞지 않아요. 이웃이 남긴 기록만 이웃의 순위가 돼요.</p>
+</div></section>
 
-
-<section id="area">
-  <h2>어디에서 쓸 수 있어요?</h2>
-  <p class="sub">지금은 <b>인천 서해구 일부 단지</b>에서 시작했고, <b>서울·경기·인천 수도권</b>으로 차례차례 넓혀 가고 있어요.</p>
-  <div class="grid">
-    <div class="card"><h3>우리 아파트가 아직 없어요</h3><p>앱에서 우리 아파트를 찾아 <b>서비스 시작 신청</b>을 남겨 주세요. 신청이 많은 곳부터 열어요.</p></div>
-    <div class="card"><h3>같은 단지 이웃끼리만</h3><p>거주 아파트를 인증한 이웃의 글만 서로 보여서, 우리 동네 이야기에 집중할 수 있어요.</p></div>
+<section style="padding-top:0"><div class="wrap">
+  <span class="eyebrow rv">한 바퀴</span>
+  <h2 class="rv">기웃거리다, 먹어보고, 남기고, 다시 기웃</h2>
+  <div class="loop rv">
+    <div class="step"><span class="e">👀</span><h3>기웃거려요</h3><p>지도에서 가게를 구경해요. 이웃이 가 본 곳이 먼저 보여요.</p></div>
+    <div class="step"><span class="e">😋</span><h3>먹어봤어요</h3><p>다녀왔다면 버튼 하나로 기록해요. 별점은 없어요.</p></div>
+    <div class="step"><span class="e">💬</span><h3>한마디 남겨요</h3><p>길게 쓰지 않아도 돼요. 이웃에게 도움이 되는 한 줄이면 충분해요.</p></div>
+    <div class="step"><span class="e">❤️</span><h3>이웃이 반응해요</h3><p>이웃의 반응이 쌓이면 다른 이웃이 다시 기웃거려요.</p></div>
   </div>
-</section>
+</div></section>
 
-<section data-nosnippet>
-  <div class="cta">
-    <img src="img/kiwoot-peek.webp" alt="" width="120" height="111" loading="lazy">
-    <h2>정식 출시 전에 먼저 써 봐 주세요</h2>
-    <p class="sub">테스터가 되어 주시면 가장 먼저 쓰고, 불편한 점을 알려 주실 수 있어요.</p>
-    <div class="btns" style="justify-content:center"><a class="btn" href="tester">테스터 참여하는 방법 보기</a></div>
+<section class="dark" id="town"><div class="wrap">
+  <span class="eyebrow rv">직접 눌러 보세요</span>
+  <h2 class="rv">우리 동네를 기웃거려 볼까요?</h2>
+  <p class="lead rv">가게를 누르고 ‘먹어봤어요’를 눌러 보세요. 이웃 기록이 5개를 넘으면 가게가 분홍색으로 바뀌어요.</p>
+  <div class="demo rv">
+    <div class="town" id="tmap" role="group" aria-label="예시 동네 지도"></div>
+    <div class="panel" aria-live="polite">
+      <div class="name" id="pname">가게</div>
+      <div class="say" id="psay"></div>
+      <div class="row"><button class="chip" data-v="0" type="button">👀 기웃거리는 중</button><button class="chip" data-v="2" type="button">😋 먹어봤어요</button></div>
+      <p class="muted" style="font-size:14px" id="ptip">눌러 보세요. 가게마다 이웃의 한마디가 달라요.</p>
+      <div class="me"><img src="img/g-look.webp" alt="" width="54" height="76"><span style="font-size:14px" class="muted">이웃 이름이나 시간은 보이지 않아요.</span></div>
+      <p class="ex">※ 체험용 예시 데이터예요.</p>
+    </div>
   </div>
-</section>
+</div></section>
 
-<section id="faq">
-  <h2>자주 묻는 질문</h2>
-  <details><summary>무료인가요?</summary><p>네, 앱은 무료예요. 결제하거나 구독할 일이 없어요.</p></details>
-  <details><summary>아이폰에서도 쓸 수 있나요?</summary><p>지금은 안드로이드 폰에서만 쓸 수 있어요.</p></details>
-  <details><summary>별점이 있나요?</summary><p>별점 대신 이웃이 남긴 "추천·별로"와 한마디, 태그로 보여 드려요.</p></details>
-  <details><summary>제 개인정보는 어떻게 쓰이나요?</summary><p>로그인 확인과 거주 아파트 인증에만 쓰고, 이웃에게는 "○○동 닉네임"만 보여요. 자세한 내용은 <a href="privacy">개인정보처리방침</a>에 있어요.</p></details>
-  <details><summary>계정을 지우고 싶어요.</summary><p>앱의 내 정보 → 설정 → 계정 삭제에서 직접 지울 수 있어요. 앱을 쓸 수 없다면 <a href="delete-account">계정 삭제 안내</a>를 확인해 주세요.</p></details>
-  <details><summary>문의는 어디로 하나요?</summary><p><a href="mailto:hello@kiwoot.com">hello@kiwoot.com</a>로 보내 주세요. 개인정보·계정 삭제 문의는 <a href="mailto:privacy@kiwoot.com">privacy@kiwoot.com</a>이에요.</p></details>
-</section>
+<section><div class="wrap">
+  <span class="eyebrow rv">앱 안에서는</span>
+  <h2 class="rv">짧게, 자주 여는 동네 앱</h2>
+  <p class="lead rv">오래 붙잡지 않아요. 열어서 기웃거리고, 정하면 닫아요.</p>
+  <div class="phones rv">
+    <div><div class="phone"><h4>우리 동네 지도</h4><span class="pill">이 지역 가게</span>
+      <div class="item"><b>골목 칼국수</b><div class="muted">😋 이웃 7 · 👀 3</div><div class="bar"><i style="width:70%"></i></div></div>
+      <div class="item"><b>새벽 베이커리</b><div class="muted">😋 이웃 12</div><div class="bar"><i style="width:100%"></i></div></div>
+      <div class="item"><b>호수 돈가스</b><div class="muted">아직 이웃 기록이 없어요</div></div></div><p class="cap">지도로 탐색</p></div>
+    <div><div class="phone"><h4>오늘의 소식</h4>
+      <div class="item">우리 단지 이웃이 새 가게에 다녀왔어요</div>
+      <div class="item">‘모퉁이 분식’에 반응이 3개 달렸어요</div>
+      <div class="item">같이 먹기 모집이 확정됐어요 🎉</div>
+      <div class="item muted">이웃 이름·정확한 시간은 알림에 담기지 않아요</div></div><p class="cap">조용한 알림</p></div>
+    <div><div class="phone"><h4>같이 먹기</h4><span class="pill">모집 중 2/4</span>
+      <div class="item"><b>저녁 칼국수</b><div class="muted">같은 단지 이웃끼리</div></div>
+      <div class="item"><b>참여하기</b><div class="muted">정원이 차면 자동으로 확정돼요</div></div>
+      <div class="item muted">원하지 않으면 언제든 취소할 수 있어요</div></div><p class="cap">같이 먹기</p></div>
+  </div>
+  <p class="ex" style="text-align:center">※ 이해를 돕는 화면 예시예요. 실제 화면과 조금 다를 수 있어요.</p>
+</div></section>
+
+<section style="background:var(--card)"><div class="wrap">
+  <span class="eyebrow rv">안심</span>
+  <h2 class="rv">기웃거림은 참견이 아니에요</h2>
+  <div class="grid3 rv">
+    <div class="card"><h3>사람을 쫓지 않아요</h3><p>이웃 이름도, 정확한 시간·동선도 보이지 않아요. 팔로우도 없어요.</p></div>
+    <div class="card"><h3>판단하지 않아요</h3><p>‘폐업 가능성’ 같은 단정 대신 이웃이 알려 준 사실만 전해요. 확인은 사람이 해요.</p></div>
+    <div class="card"><h3>다른 단지는 익명으로만</h3><p>다른 아파트 이웃의 반응은 5명 이상일 때 숫자로만, 누구인지 알 수 없게 보여요.</p></div>
+  </div>
+</div></section>
+
+<section id="area"><div class="wrap">
+  <span class="eyebrow rv">지역</span>
+  <h2 class="rv">수도권부터, 열린 동네부터</h2>
+  <p class="lead rv">가게 정보는 공공데이터로 미리 준비해요. 이웃이 모이는 동네부터 차례로 열어요. 첫 시작은 <b>인천 서해구</b>예요.</p>
+  <div class="regions rv"><span>인천 서해구</span><span class="off">서울</span><span class="off">경기</span><span class="off">인천 그 밖의 구</span></div>
+  <p class="muted rv" style="margin-top:14px;font-size:15px">우리 동네가 아직 닫혀 있다면 앱에서 ‘서비스 시작 신청’을 남겨 주세요. 신청이 모이면 먼저 열어요.</p>
+  <canvas id="dots" class="rv" role="img" aria-label="흩어진 점이 하나의 동네 지도로 모이는 그림"></canvas>
+</div></section>
+
+<section id="faq" style="padding-top:0"><div class="wrap">
+  <h2 class="rv">자주 묻는 질문</h2>
+  <details class="rv"><summary>무료인가요?</summary><p>네, 무료예요. 광고성 외부 콘텐츠를 순위에 섞지도 않아요.</p></details>
+  <details class="rv"><summary>아이폰에서도 쓸 수 있나요?</summary><p>지금은 안드로이드만 지원해요. 다른 환경은 필요해지면 공지할게요.</p></details>
+  <details class="rv"><summary>가게 정보는 어디서 오나요?</summary><p>공공데이터로 기본 가게를 준비하고, 이후 변동은 이웃의 제보로 반영해요. 별점이나 외부 리뷰는 붙이지 않아요.</p></details>
+  <details class="rv"><summary>개인정보는 어떻게 다루나요?</summary><p>필요한 최소한만 받고, 이웃 이름·위치 동선은 다른 사람에게 보이지 않아요. 자세한 내용은 <a href="privacy">개인정보처리방침</a>을 확인해 주세요.</p></details>
+  <details class="rv"><summary>계정을 지우고 싶어요.</summary><p>앱 안에서 바로 삭제하거나 <a href="delete-account">계정 삭제 안내</a>를 참고하세요.</p></details>
+</div></section>
+
+<section class="final"><div class="wrap">
+  <h2>오늘은 뭐 먹지? 이웃에게 물어봐요.</h2>
+  <p class="lead" style="margin-inline:auto">설치하고 우리 동네를 기웃거려 보세요. 의견은 언제든 들려 주세요.</p>
+  <div class="btns" data-nosnippet><a class="btn" href="https://play.google.com/store/apps/details?id=com.twoguns.kiwoot">Google Play에서 받기</a></div>
+  <img src="img/g-happy.webp" alt="기웃이: 반갑게 인사하는 아기 기린" width="453" height="640" loading="lazy">
+</div></section>
 </main>
-
-<footer>
-  <nav>
-    <a href="tester">테스터 안내</a><a href="terms">이용약관 (Terms)</a><a href="privacy">개인정보처리방침 (Privacy)</a><a href="community">커뮤니티 운영정책</a><a href="child-safety">아동 안전 표준</a><a href="delete-account">계정 삭제 (Delete account)</a>
-  </nav>
+<footer><div class="wrap">
+  <p class="promise">기웃거림은 참견이 아닙니다.</p>
+  <nav><a href="terms">이용약관 (Terms)</a><a href="privacy">개인정보처리방침 (Privacy)</a><a href="community">커뮤니티 운영정책</a><a href="child-safety">아동 안전 표준</a><a href="delete-account">계정 삭제 (Delete account)</a></nav>
   <p>기웃기웃(Kiwoot) · 운영: 2Guns · 문의 <a href="mailto:hello@kiwoot.com">hello@kiwoot.com</a> · 개인정보·계정 삭제 <a href="mailto:privacy@kiwoot.com">privacy@kiwoot.com</a></p>
-</footer>
-</div>
+</div></footer>
+<script src="home.js"></script>
 </body></html>
