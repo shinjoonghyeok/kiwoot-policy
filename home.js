@@ -1,9 +1,9 @@
 (function(){
   // 출시 때 Play 스토어 주소를 여기에만 넣는다. 비어 있으면 테스터 안내로 간다.
-  var STORE_URL="";
+  var STORE_URL="https://play.google.com/store/apps/details?id=com.twoguns.kiwoot";
   var root=document.documentElement;root.classList.remove("nojs");
   document.querySelectorAll("[data-cta]").forEach(function(a){
-    if(STORE_URL){a.href=STORE_URL;a.textContent=a.dataset.cta==="main"?"Google Play에서 받기":a.textContent}
+    if(STORE_URL){a.href=STORE_URL;a.textContent=a.dataset.cta==="main"?"Google Play에서 받기":"앱 받기"}
   });
   var reduce=matchMedia("(prefers-reduced-motion:reduce)").matches;
   // reveal
