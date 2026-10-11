@@ -5,7 +5,7 @@
   --bg:#FAF7F3; --card:#FFFFFF; --ink:#3E241E; --muted:#6E5A55; --accent:#B0476A; --accent-ink:#FFFFFF; --soft:#F6E8EC; --line:#ECE5DF;
   --stamp-peach:#EBC9B5; --stamp-mint:#CFE3D2; --stamp-sky:#CFDCEB; --stamp-butter:#F1E3A8; --stamp-ring:#FFFFFF; --stamp-star:#8A5A3C;
   --display:"Jua","Apple SD Gothic Neo","Malgun Gothic",sans-serif; --body:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",system-ui,sans-serif;
-  color-scheme:light;
+  color-scheme:only light;
 }
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--ink);font:17px/1.75 var(--body);word-break:keep-all;overflow-wrap:break-word}
@@ -86,8 +86,10 @@ h1 .w{display:inline-block;opacity:1}
 .cta h2{font-size:clamp(26px,3.4vw,36px)}
 .cta p{color:var(--muted);margin:10px 0 20px}
 .cta .peek-wrap{height:111px;overflow:hidden;margin:-20px 0 6px}
-.cta .peek-wrap img{display:block;width:120px;margin:0 auto;transform:translateY(100%);transition:transform .8s cubic-bezier(.2,.9,.3,1.2)}
-.cta.go .peek-wrap img{transform:translateY(0)}
+.cta .peek-wrap img{display:block;width:120px;height:auto;margin:0 auto}
+.js .cta:not(.go) .peek-wrap img{transform:translateY(100%)}
+.js .cta.go .peek-wrap img{animation:rise .8s cubic-bezier(.2,.9,.3,1.2) both}
+@keyframes rise{from{transform:translateY(100%)}to{transform:translateY(0)}}
 .cta .btns{justify-content:center}
 
 
@@ -108,7 +110,8 @@ footer a{color:var(--muted)}
   .more ul{grid-template-columns:1fr}
 }
 @media (prefers-reduced-motion:reduce){
-  .phone img,.step,.cta .peek-wrap img{transition:none}
+  .phone img,.step{transition:none}
+  .js .cta:not(.go) .peek-wrap img,.js .cta.go .peek-wrap img{transform:none;animation:none}
   .route g.s{opacity:1;transform:scale(1) rotate(var(--r))}
   .route.go g.s{animation:none}
 }
