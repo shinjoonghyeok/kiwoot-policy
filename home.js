@@ -1,5 +1,6 @@
 
 (function(){
+  document.documentElement.classList.add('js');
   var FRAMES=[];for(var q=0;q<17;q++)FRAMES.push('img/giraffe/t_'+(q<10?'0':'')+q+'.webp');
   var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
 
