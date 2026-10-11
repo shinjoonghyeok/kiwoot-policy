@@ -115,7 +115,7 @@ footer a{color:var(--muted)}
 /* 입구 영상: 접속하면 먼저 재생하고 끝나면 홈페이지로 (실제 사이트는 첫 방문 1번만, 건너뛰기 있음) */
 #intro{position:fixed;inset:0;z-index:50;background:#F8F0E3;display:grid;place-items:center;opacity:1;transition:opacity .7s ease}
 #intro.out{opacity:0;pointer-events:none}
-#intro video{width:min(92vw,520px);max-height:84vh;aspect-ratio:912/1010;object-fit:contain;display:block}
+#intro video{width:min(92vw,520px,calc(84vh * .903));height:auto;aspect-ratio:912/1010;object-fit:contain;display:block;background:#F8F0E3}
 #intro button{position:absolute;right:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));background:#FFFFFFB3;color:#3E241E;border:1px solid #3E241E55;border-radius:999px;padding:8px 18px;font:15px var(--body);cursor:pointer}
 body.introing{overflow:hidden}
 @media (prefers-reduced-motion:reduce){#intro{display:none}}
