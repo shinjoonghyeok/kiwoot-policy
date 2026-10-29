@@ -133,7 +133,7 @@ body.introing{overflow:hidden}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-snap-type:none;scroll-behavior:auto}}
 
-/* 할로윈 한정 (home.js 가 10/29~11/1 에만 html.hw 를 붙인다) */
+/* 할로윈 한정 (home.js 가 10/29~11/7 에만 html.hw 를 붙인다) */
 .hw .stage::before{background:#FFE6C7}
 .hw .state{background:#FFE6C7;color:#8A3A00}
 .hw .stage img{animation:hwsway 3.2s ease-in-out infinite;transform-origin:50% 90%}
