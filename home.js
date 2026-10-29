@@ -22,13 +22,18 @@
   })();
   // 1) 기웃이 인사: 앱 시작 화면과 같은 움직임 (오른쪽 12° → 왼쪽 12° → 오른쪽 11° → 가운데). 프레임 교체만, 몸은 그대로
   var gi=document.getElementById('gi');
+  // 할로윈 한정(한국 시간 10/29~11/7): 호박 쓴 기웃이. 기간이 지나면 저절로 평소 인사로 돌아간다
+  var HW=(function(){try{var d=new Date(new Date().toLocaleString('en-US',{timeZone:'Asia/Seoul'})),m=d.getMonth()+1,n=d.getDate();return (m===10&&n>=29)||(m===11&&n<=7)}catch(e){return false}})();
+  if(HW){gi.src='img/giraffe/halloween.webp';gi.width=716;gi.height=980;gi.alt='호박을 쓴 기웃이';document.documentElement.classList.add('hw');
+    var st=document.querySelector('.stage');if(st)st.style.aspectRatio='716/980';
+    var sb=document.querySelector('.state');if(sb)sb.lastChild.textContent='해피 할로윈! 호박을 쓰고 인사해요 🎃'}
   var imgs=FRAMES.map(function(s){var i=new Image();i.src=s;return i});
   var running=false;
-  function draw(i){var im=imgs[i];if(im&&im.complete)gi.src=im.src}
+  function draw(i){if(HW)return;var im=imgs[i];if(im&&im.complete)gi.src=im.src}
   var KF=[[0,0],[320,12],[760,-12],[1200,11],[1750,0]];
   function ease(t){return t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2}
   function angle(ms){for(var k=1;k<KF.length;k++){if(ms<=KF[k][0]){var a=KF[k-1],b=KF[k],t=(ms-a[0])/(b[0]-a[0]);return a[1]+(b[1]-a[1])*ease(t)}}return 0}
-  function play(){if(reduce||running)return;running=true;var t0=performance.now();
+  function play(){if(HW||reduce||running)return;running=true;var t0=performance.now();
     (function step(now){var ms=now-t0;draw(Math.max(0,Math.min(16,Math.round((angle(ms)+12)/1.5))));
       if(ms<1750)requestAnimationFrame(step);else{running=false;draw(8)}})(t0)}
   playHook=function(){if(framesReady)setTimeout(play,200)};
