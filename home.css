@@ -139,3 +139,4 @@ body.introing{overflow:hidden}
 .hw .stage img{animation:hwsway 3.2s ease-in-out infinite;transform-origin:50% 90%}
 @keyframes hwsway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
 @media (prefers-reduced-motion:reduce){.hw .stage img{animation:none}}
+.btn[hidden]{display:none}
