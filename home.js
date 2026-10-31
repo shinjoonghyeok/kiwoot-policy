@@ -79,3 +79,27 @@
   // 4) CTA: 기웃이가 아래에서 빼꼼
   var cta=document.getElementById('cta');onceIn(cta,function(){cta.classList.add('go')});
 })();
+
+// App Store 버튼: 앱이 App Store 에 실제로 올라온 뒤에만 보인다(심사 중에는 숨김) — 애플 공개 조회(JSONP)로 확인해서
+// 사람이 사이트를 다시 고치지 않아도 출시되는 날 저절로 나타난다. 아이폰으로 들어오면 위쪽 "앱 받기"도 App Store 로.
+(function(){
+  var APPSTORE='https://apps.apple.com/kr/app/id6829109381';
+  window.kwAppStore=function(r){
+    if(!r||!r.resultCount)return;
+    var bs=document.querySelectorAll('.btn.appstore');for(var i=0;i<bs.length;i++)bs[i].hidden=false;
+    if(/iPhone|iPad|iPod/.test(navigator.userAgent)){var g=document.getElementById('getapp');if(g)g.href=APPSTORE}
+  };
+  var s=document.createElement('script');s.async=true;
+  s.src='https://itunes.apple.com/lookup?id=6829109381&country=kr&callback=kwAppStore';
+  document.head.appendChild(s);
+})();
+
+// SNS 링크(kiwoot.com/?utm_source=threads&utm_medium=post 등)로 들어오면 그 유입 경로를 Play 버튼에 그대로 넘긴다
+// — 플레이 콘솔 획득 보고서에서 어디서 왔는지 계속 보이게 (D-070)
+(function(){
+  var q=location.search.match(/[?&]utm_source=([^&#]+)/), m=location.search.match(/[?&]utm_medium=([^&#]+)/);
+  if(!q)return;
+  var ref=encodeURIComponent('utm_source='+decodeURIComponent(q[1])+(m?'&utm_medium='+decodeURIComponent(m[1]):''));
+  var as=document.querySelectorAll('a[href^="https://play.google.com/store/apps/details?id=com.twoguns.kiwoot"]');
+  for(var i=0;i<as.length;i++)as[i].href='https://play.google.com/store/apps/details?id=com.twoguns.kiwoot&referrer='+ref;
+})();
