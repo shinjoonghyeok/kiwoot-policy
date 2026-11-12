@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>기웃기웃 초대</title>
+<meta name="robots" content="noindex">
+<meta name="description" content="같은 아파트 이웃이 먹어본 동네 맛집을 기웃거려봐요.">
+<link rel="stylesheet" href="../style.css"><link rel="icon" href="/favicon.ico" sizes="48x48">
+<meta property="og:type" content="website"><meta property="og:site_name" content="기웃기웃"><meta property="og:locale" content="ko_KR">
+<meta property="og:title" content="우리 아파트 이웃이 기웃기웃에 초대했어요"><meta property="og:description" content="같은 아파트 이웃이 먹어본 동네 맛집을 기웃거려봐요.">
+<meta property="og:image" content="https://kiwoot.com/img/og.jpg?v=2">
+<style>.cta{display:inline-block;margin:8px 0 4px;padding:12px 22px;border-radius:14px;background:var(--accent);color:#FFFFFF;text-decoration:none;font-weight:700}</style>
+</head>
+<body><main>
+<header><div class="dot">기</div><h1 id="title">우리 아파트 이웃이 초대했어요</h1></header>
+<div class="card">
+<p>같은 아파트 이웃이 먹어본 동네 맛집을 기웃기웃에서 기웃거려봐요. 별점이나 광고가 아니라 이웃이 남긴 한마디로 골라요.</p>
+<p id="play-row"><a class="cta" id="play" href="https://play.google.com/store/apps/details?id=com.twoguns.kiwoot&amp;referrer=utm_source%3Dinvite%26utm_medium%3Dshare">Google Play에서 받기</a></p>
+<p id="ios-row" hidden><a class="cta" id="ios" href="https://apps.apple.com/app/id6829109381">App Store에서 받기</a></p>
+<p class="muted" id="ios-soon" hidden>아이폰 앱은 곧 나와요.</p>
+<p class="muted" id="note"></p>
+</div>
+<footer><nav><a href="../terms">이용약관</a><a href="../privacy">개인정보처리방침</a><a href="../community">커뮤니티 운영정책</a><a href="../regions">지역별 안내</a></nav>
+<p class="muted">문의 <a href="mailto:hello@kiwoot.com">hello@kiwoot.com</a> · 개인정보·계정 삭제 <a href="mailto:privacy@kiwoot.com">privacy@kiwoot.com</a></p></footer>
+</main>
+<script>
+// 초대 링크 (앱 InviteLink 와 같은 이름): ?a=<아파트 id>&n=<아파트 이름>. 보낸 사람 정보는 없다.
+// 안드로이드는 스토어 설치 리퍼러(invite=<id>)로 앱에 넘겨, 설치하면 그 아파트가 미리 골라져 있다. 인증은 앱에서 위치로 확인한다.
+(function () {
+  var IOS_OPEN = false;                      // App Store 에 열리면 true 로 (그 전에는 "곧 나와요")
+  var q = new URLSearchParams(location.search);
+  var a = q.get('a') || '', n = (q.get('n') || '').trim().slice(0, 40);
+  var ok = /^[A-Za-z0-9_-]{6,64}$/.test(a);
+  var ua = navigator.userAgent || '';
+  var ios = /iPhone|iPad|iPod/.test(ua), android = /Android/.test(ua);
+  if (n) {
+    document.getElementById('title').textContent = n + ' 이웃이 초대했어요';
+    document.title = n + ' · 기웃기웃 초대';
+  }
+  var ref = (ok ? 'invite=' + a + '&' : '') + 'utm_source=invite&utm_medium=share';
+  document.getElementById('play').href = 'https://play.google.com/store/apps/details?id=com.twoguns.kiwoot&referrer=' + encodeURIComponent(ref);
+  if (ios) document.getElementById('play-row').hidden = true;
+  if (!android) document.getElementById(IOS_OPEN ? 'ios-row' : 'ios-soon').hidden = false;
+  var note = '';
+  if (n && ok && !ios) note = '설치하면 "' + n + '" 아파트가 미리 골라져 있어요. 인증은 아파트에서 위치로 확인해요.';
+  else if (n && ios && IOS_OPEN) note = '설치한 뒤 "' + n + '" 아파트를 찾아 인증해 주세요.';
+  document.getElementById('note').textContent = note;
+})();
+</script>
+</body></html>
