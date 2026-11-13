@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>기웃기웃 이야기</title>
+  <link>https://kiwoot.com/blog/</link>
+  <atom:link href="https://kiwoot.com/blog/rss.xml" rel="self" type="application/rss+xml"/>
+  <description>기웃기웃을 더 잘 쓰는 방법과 기능 이야기 — 아파트 이웃이 먹어본 동네 맛집, 월간 기웃, 우리 아파트 투표.</description>
+  <language>ko</language>
+  <lastBuildDate>Fri, 13 Nov 2026 09:00:00 +0900</lastBuildDate>
+  <item>
+    <title>아파트 이웃이 먹어본 곳으로 오늘 저녁 고르기</title>
+    <link>https://kiwoot.com/blog/neighbors-dinner</link>
+    <guid isPermaLink="true">https://kiwoot.com/blog/neighbors-dinner</guid>
+    <description>별점 대신 같은 아파트 이웃이 먹어본 기록으로 동네 맛집을 고르는 방법. 기웃기웃의 먹어봤어요·오늘 소식·룰렛을 소개해요.</description>
+    <pubDate>Mon, 09 Nov 2026 09:00:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>월간 기웃 — 한 달 동안 우리 아파트가 먹은 이야기</title>
+    <link>https://kiwoot.com/blog/monthly-kiwoot</link>
+    <guid isPermaLink="true">https://kiwoot.com/blog/monthly-kiwoot</guid>
+    <description>매달 1일 나오는 월간 기웃은 우리 아파트 이웃들의 한 달 먹은 이야기를 한 권에 모아요. 투표 결과, 이웃이 새로 찾은 가게, 지난 호까지.</description>
+    <pubDate>Mon, 09 Nov 2026 09:00:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>점심 투표로 보는 우리 아파트 입맛</title>
+    <link>https://kiwoot.com/blog/apartment-poll</link>
+    <guid isPermaLink="true">https://kiwoot.com/blog/apartment-poll</guid>
+    <description>우리 아파트 투표는 누가 무엇을 골랐는지 보이지 않고 결과만 숫자로 보여요. 기웃기웃 투표가 어떻게 돌아가는지 소개해요.</description>
+    <pubDate>Mon, 09 Nov 2026 09:00:00 +0900</pubDate>
+  </item>
+</channel>
+</rss>
