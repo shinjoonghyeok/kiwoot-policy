@@ -25,7 +25,7 @@
 // 초대 링크 (앱 InviteLink 와 같은 이름): ?a=<아파트 id>&n=<아파트 이름>. 보낸 사람 정보는 없다.
 // 안드로이드는 스토어 설치 리퍼러(invite=<id>)로 앱에 넘겨, 설치하면 그 아파트가 미리 골라져 있다. 인증은 앱에서 위치로 확인한다.
 (function () {
-  var IOS_OPEN = false;                      // App Store 에 열리면 true 로 (그 전에는 "곧 나와요")
+  var IOS_OPEN = true;                       // App Store 에 열림 (2026-11-26, 0.9.77 승인) — 닫으려면 false ("곧 나와요")
   var q = new URLSearchParams(location.search);
   var a = q.get('a') || '', n = (q.get('n') || '').trim().slice(0, 40);
   var ok = /^[A-Za-z0-9_-]{6,64}$/.test(a);
