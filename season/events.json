@@ -1,0 +1,146 @@
+{
+ "version": 1,
+ "note": "기웃기웃 시즌 이벤트 달력 (D-124) — tools/season_calendar.py 가 만든다. 손으로 고치지 않는다",
+ "events": [
+  {
+   "id": "christmas-2026",
+   "from": "2026-12-01",
+   "to": "2026-12-31",
+   "fall": "snow",
+   "motion": "fall",
+   "afterReview": {
+    "ko": "우리 아파트에 눈이 내려요 ❄️",
+    "en": "Snow is falling on your apartment ❄️",
+    "ja": "マンションに雪が降っています ❄️",
+    "zh": "我们小区下雪了 ❄️",
+    "es": "Está nevando en tu edificio ❄️"
+   }
+  },
+  {
+   "id": "christmas-2027",
+   "from": "2027-12-01",
+   "to": "2027-12-31",
+   "fall": "snow",
+   "motion": "fall",
+   "afterReview": {
+    "ko": "우리 아파트에 눈이 내려요 ❄️",
+    "en": "Snow is falling on your apartment ❄️",
+    "ja": "マンションに雪が降っています ❄️",
+    "zh": "我们小区下雪了 ❄️",
+    "es": "Está nevando en tu edificio ❄️"
+   }
+  },
+  {
+   "id": "christmas-2028",
+   "from": "2028-12-01",
+   "to": "2028-12-31",
+   "fall": "snow",
+   "motion": "fall",
+   "afterReview": {
+    "ko": "우리 아파트에 눈이 내려요 ❄️",
+    "en": "Snow is falling on your apartment ❄️",
+    "ja": "マンションに雪が降っています ❄️",
+    "zh": "我们小区下雪了 ❄️",
+    "es": "Está nevando en tu edificio ❄️"
+   }
+  },
+  {
+   "id": "christmas-2029",
+   "from": "2029-12-01",
+   "to": "2029-12-31",
+   "fall": "snow",
+   "motion": "fall",
+   "afterReview": {
+    "ko": "우리 아파트에 눈이 내려요 ❄️",
+    "en": "Snow is falling on your apartment ❄️",
+    "ja": "マンションに雪が降っています ❄️",
+    "zh": "我们小区下雪了 ❄️",
+    "es": "Está nevando en tu edificio ❄️"
+   }
+  },
+  {
+   "id": "christmas-2030",
+   "from": "2030-12-01",
+   "to": "2030-12-31",
+   "fall": "snow",
+   "motion": "fall",
+   "afterReview": {
+    "ko": "우리 아파트에 눈이 내려요 ❄️",
+    "en": "Snow is falling on your apartment ❄️",
+    "ja": "マンションに雪が降っています ❄️",
+    "zh": "我们小区下雪了 ❄️",
+    "es": "Está nevando en tu edificio ❄️"
+   }
+  },
+  {
+   "id": "christmas-2031",
+   "from": "2031-12-01",
+   "to": "2031-12-31",
+   "fall": "snow",
+   "motion": "fall",
+   "afterReview": {
+    "ko": "우리 아파트에 눈이 내려요 ❄️",
+    "en": "Snow is falling on your apartment ❄️",
+    "ja": "マンションに雪が降っています ❄️",
+    "zh": "我们小区下雪了 ❄️",
+    "es": "Está nevando en tu edificio ❄️"
+   }
+  },
+  {
+   "id": "christmas-2032",
+   "from": "2032-12-01",
+   "to": "2032-12-31",
+   "fall": "snow",
+   "motion": "fall",
+   "afterReview": {
+    "ko": "우리 아파트에 눈이 내려요 ❄️",
+    "en": "Snow is falling on your apartment ❄️",
+    "ja": "マンションに雪が降っています ❄️",
+    "zh": "我们小区下雪了 ❄️",
+    "es": "Está nevando en tu edificio ❄️"
+   }
+  },
+  {
+   "id": "christmas-2033",
+   "from": "2033-12-01",
+   "to": "2033-12-31",
+   "fall": "snow",
+   "motion": "fall",
+   "afterReview": {
+    "ko": "우리 아파트에 눈이 내려요 ❄️",
+    "en": "Snow is falling on your apartment ❄️",
+    "ja": "マンションに雪が降っています ❄️",
+    "zh": "我们小区下雪了 ❄️",
+    "es": "Está nevando en tu edificio ❄️"
+   }
+  },
+  {
+   "id": "christmas-2034",
+   "from": "2034-12-01",
+   "to": "2034-12-31",
+   "fall": "snow",
+   "motion": "fall",
+   "afterReview": {
+    "ko": "우리 아파트에 눈이 내려요 ❄️",
+    "en": "Snow is falling on your apartment ❄️",
+    "ja": "マンションに雪が降っています ❄️",
+    "zh": "我们小区下雪了 ❄️",
+    "es": "Está nevando en tu edificio ❄️"
+   }
+  },
+  {
+   "id": "christmas-2035",
+   "from": "2035-12-01",
+   "to": "2035-12-31",
+   "fall": "snow",
+   "motion": "fall",
+   "afterReview": {
+    "ko": "우리 아파트에 눈이 내려요 ❄️",
+    "en": "Snow is falling on your apartment ❄️",
+    "ja": "マンションに雪が降っています ❄️",
+    "zh": "我们小区下雪了 ❄️",
+    "es": "Está nevando en tu edificio ❄️"
+   }
+  }
+ ]
+}
