@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>기웃기웃 받기</title>
+<meta name="robots" content="noindex">
+<meta name="description" content="같은 아파트 이웃이 먹어본 동네 맛집을 기웃기웃에서 기웃해 봐요.">
+<link rel="stylesheet" href="style.css"><link rel="icon" href="/favicon.ico" sizes="48x48">
+<meta property="og:type" content="website"><meta property="og:site_name" content="기웃기웃"><meta property="og:locale" content="ko_KR">
+<meta property="og:title" content="기웃기웃 - 아파트 이웃이 먹어본 동네 맛집"><meta property="og:description" content="같은 아파트 이웃이 먹어본 동네 맛집을 기웃기웃에서 기웃해 봐요.">
+<meta property="og:image" content="https://kiwoot.com/img/og.jpg?v=2">
+<style>.cta{display:inline-block;margin:8px 0 4px;padding:12px 22px;border-radius:14px;background:var(--accent);color:#FFFFFF;text-decoration:none;font-weight:700}</style>
+</head>
+<body><main>
+<header><div class="dot">기</div><h1>기웃기웃 받기</h1></header>
+<div class="card">
+<p>같은 아파트 이웃이 먹어본 동네 맛집을 기웃기웃에서 기웃해 봐요.</p>
+<p id="play-row"><a class="cta" id="play" href="https://play.google.com/store/apps/details?id=com.twoguns.kiwoot&amp;referrer=utm_source%3Dshare%26utm_medium%3Dlink">Google Play에서 받기</a></p>
+<p id="ios-row"><a class="cta" id="ios" href="https://apps.apple.com/app/id6829109381">App Store에서 받기</a></p>
+<p class="muted"><a href="/">기웃기웃 홈페이지</a></p>
+</div>
+<footer><nav><a href="terms">이용약관</a><a href="privacy">개인정보처리방침</a><a href="community">커뮤니티 운영정책</a><a href="regions">지역별 안내</a></nav>
+<p class="muted">문의 <a href="mailto:hello@kiwoot.com">hello@kiwoot.com</a> · 개인정보·계정 삭제 <a href="mailto:privacy@kiwoot.com">privacy@kiwoot.com</a></p></footer>
+</main>
+<script>
+// 앱 공유 글의 링크 하나 (2026-11-28 PM): 폰 종류를 보고 맞는 스토어로 바로 보낸다 — 안드로이드 → Google Play, 아이폰 → App Store, 그 밖(PC)은 두 단추.
+// 보낸 사람·가게 정보는 받지 않는다(주소에 아무것도 싣지 않음). 앱이 깔린 폰은 카카오톡 카드 "앱에서 보기"가 앱을 연다.
+(function () {
+  var ua = navigator.userAgent || '';
+  var ios = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1), android = /Android/.test(ua);
+  if (android) { document.getElementById('ios-row').hidden = true; location.replace(document.getElementById('play').href); }
+  else if (ios) { document.getElementById('play-row').hidden = true; location.replace(document.getElementById('ios').href); }
+})();
+</script>
+</body></html>
