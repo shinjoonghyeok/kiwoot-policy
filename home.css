@@ -133,10 +133,11 @@ body.introing{overflow:hidden}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-snap-type:none;scroll-behavior:auto}}
 
-/* 할로윈 한정 (home.js 가 10/29~11/7 에만 html.hw 를 붙인다) */
+/* 할로윈 한정 (home.js 가 10/29~10/31 에만 html.hw 를 붙인다) */
 .hw .stage::before{background:#FFE6C7}
 .hw .state{background:#FFE6C7;color:#8A3A00}
-.hw .stage img{animation:hwsway 3.2s ease-in-out infinite;transform-origin:50% 90%}
+.hw .stage img,.xm .stage img{animation:hwsway 3.2s ease-in-out infinite;transform-origin:50% 90%}
 @keyframes hwsway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
-@media (prefers-reduced-motion:reduce){.hw .stage img{animation:none}}
+/* 크리스마스 한정 (home.js 가 12월에만 html.xm 을 붙인다) — 색은 평소 그대로, 기웃이만 살랑 */
+@media (prefers-reduced-motion:reduce){.hw .stage img,.xm .stage img{animation:none}}
 .btn[hidden]{display:none}
