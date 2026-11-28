@@ -23,10 +23,14 @@
   // 1) 기웃이 인사: 앱 시작 화면과 같은 움직임 (오른쪽 12° → 왼쪽 12° → 오른쪽 11° → 가운데). 프레임 교체만, 몸은 그대로
   var gi=document.getElementById('gi');
   // 할로윈 한정(한국 시간 10/29~10/31, 11월 1일부터 평소 — PM 2026-11-26): 호박 쓴 기웃이. 기간이 지나면 저절로 평소 인사로 돌아간다
-  var HW=(function(){try{var d=new Date(new Date().toLocaleString('en-US',{timeZone:'Asia/Seoul'})),m=d.getMonth()+1,n=d.getDate();return m===10&&n>=29}catch(e){return false}})();
-  if(HW){gi.src='img/giraffe/halloween.webp';gi.width=716;gi.height=980;gi.alt='호박을 쓴 기웃이';document.documentElement.classList.add('hw');
-    var st=document.querySelector('.stage');if(st)st.style.aspectRatio='716/980';
-    var sb=document.querySelector('.state');if(sb)sb.lastChild.textContent='해피 할로윈! 호박을 쓰고 인사해요 🎃'}
+  // 크리스마스 한정(한국 시간 12월 내내 — 앱 D-123·D-124 와 같은 기간, PM 2026-11-28): PM 이 승인한 크리스마스 기웃이(season/christmas, 앱과 같은 그림)
+  var SP=(function(){try{var d=new Date(new Date().toLocaleString('en-US',{timeZone:'Asia/Seoul'})),m=d.getMonth()+1,n=d.getDate();return m===10&&n>=29?'hw':m===12?'xm':''}catch(e){return ''}})();
+  var HW=!!SP;   // 특별한 날 그림이 있으면 평소 갸웃 움직임(프레임 교체)은 쉰다
+  var POSE={hw:['img/giraffe/halloween.webp',716,980,'호박을 쓴 기웃이','해피 할로윈! 호박을 쓰고 인사해요 🎃'],
+            xm:['season/christmas/kiwoot.png',512,737,'크리스마스 기웃이','메리 크리스마스! 기웃이가 인사해요 🎄']}[SP];
+  if(POSE){gi.src=POSE[0];gi.width=POSE[1];gi.height=POSE[2];gi.alt=POSE[3];document.documentElement.classList.add(SP);
+    var st=document.querySelector('.stage');if(st)st.style.aspectRatio=POSE[1]+'/'+POSE[2];
+    var sb=document.querySelector('.state');if(sb)sb.lastChild.textContent=POSE[4]}
   var imgs=FRAMES.map(function(s){var i=new Image();i.src=s;return i});
   var running=false;
   function draw(i){if(HW)return;var im=imgs[i];if(im&&im.complete)gi.src=im.src}
